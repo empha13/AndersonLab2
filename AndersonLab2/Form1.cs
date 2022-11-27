@@ -21,13 +21,14 @@ namespace AndersonLab2
          * October 6, 2022
          * This is a program that will calculate multiplications. This will also show a picture of my cat Mya and a description of her as well. */
 
-        //declare name as constant
+        //declare constants
         const string NAME = "Emily";
+        const string DESC = "Mya the Cat";
 
         private void btnExit_Click(object sender, EventArgs e)
         {
             // Close the form.
-            this.Close();
+            Close();
         }
 
         
@@ -59,7 +60,7 @@ namespace AndersonLab2
         private void btnData_Click(object sender, EventArgs e)
         {
             // Place My topic is [show the topic name label text - do not type the string].
-            lblDescription.Text = "My topic is " + lblTopic.Text + "!\n" +
+            lblDescription.Text = "My topic is " + lblTopic.Text + "!\n\n" +
                 "This is my cat Mya. She is our oldest cat of 3. Mya is 3 years old now and she has the attitude of the oldest sibling.\n" +
                 "She is very bossy, loves her personal space and believes she is the favourite child.\n" +
                 "I love all my cats very much.";
@@ -72,7 +73,7 @@ namespace AndersonLab2
         private void picMya_Click(object sender, EventArgs e)
         {
             // Display a messagebox that tells information about the picture. Place name in the title of the messagebox.
-            MessageBox.Show("My Cat Mya", NAME);
+            MessageBox.Show(DESC, NAME);
         }
 
         private void btnCalculate_Click(object sender, EventArgs e)
@@ -84,7 +85,7 @@ namespace AndersonLab2
             int Multiplier = Convert.ToInt32(txtMultiplier.Text);
             int Answer = Number * Multiplier;
             // Multiply the number and multiplier together and place the answer into the variable answer.
-            lblOutput.Text = Answer.ToString();
+            lblOutput.Text = Answer.ToString("d2");
             // Display the answer in the label (conversion required).
         }
 
